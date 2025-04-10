@@ -11,7 +11,7 @@ test.describe('Web Tables', () => {
       age: 30,
       email: 'john.doe@example.com',
       salary: 50000,
-      department: 'IT'
+      department: 'IT',
     });
     await expect(page.locator('.rt-table')).toContainText('John', { timeout: 5000 });
   });

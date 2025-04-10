@@ -12,7 +12,7 @@ export class ModalDialogsPage extends BasePage {
 
   async openSmallModal() {
     await this.page.evaluate(() => {
-      document.querySelectorAll('iframe[id^="google_ads_iframe"]').forEach(el => el.remove());
+      document.querySelectorAll('iframe[id^="google_ads_iframe"]').forEach((el) => el.remove());
     });
     await this.page.getByRole('button', { name: 'Small modal' }).click();
   }

@@ -19,12 +19,14 @@ This project is a Playwright UI automation suite for [DemoQA](https://demoqa.com
 ## Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone <repository-url>
    cd <repository-directory>
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm ci
    ```

@@ -5,10 +5,7 @@ test.describe('Links', () => {
   test('should open simple link in a new tab', async ({ page }) => {
     const linksPage = new LinksPage(page);
     await linksPage.navigate();
-    const [newPage] = await Promise.all([
-      page.waitForEvent('popup'),
-      linksPage.clickSimpleLink()
-    ]);
+    const [newPage] = await Promise.all([page.waitForEvent('popup'), linksPage.clickSimpleLink()]);
     await newPage.waitForLoadState();
     expect(newPage.url()).toBe('https://demoqa.com/');
     await newPage.close();
@@ -17,10 +14,7 @@ test.describe('Links', () => {
   test('should open dynamic link in a new tab', async ({ page, context }) => {
     const linksPage = new LinksPage(page);
     await linksPage.navigate();
-    const [newPage] = await Promise.all([
-      context.waitForEvent('page'),
-      linksPage.clickDynamicLink()
-    ]);
+    const [newPage] = await Promise.all([context.waitForEvent('page'), linksPage.clickDynamicLink()]);
     await newPage.waitForLoadState();
     expect(newPage.url()).toBe('https://demoqa.com/');
     await newPage.close();

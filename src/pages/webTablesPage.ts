@@ -10,7 +10,14 @@ export class WebTablesPage extends BasePage {
     await super.navigate('/webtables');
   }
 
-  async addNewRecord(record: { firstName: string; lastName: string; age: number; email: string; salary: number; department: string; }) {
+  async addNewRecord(record: {
+    firstName: string;
+    lastName: string;
+    age: number;
+    email: string;
+    salary: number;
+    department: string;
+  }) {
     await this.page.getByRole('button', { name: /add/i }).click();
     await this.page.locator('#firstName').fill(record.firstName);
     await this.page.locator('#lastName').fill(record.lastName);

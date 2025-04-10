@@ -8,19 +8,19 @@ test.describe('Accordian', () => {
 
     const sectionOneContent = await accordian.getSectionOneContent();
     expect(sectionOneContent).toContain(
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     );
 
     await accordian.expandSectionTwo();
     const sectionTwoContent = await accordian.getSectionTwoContent();
     expect(sectionTwoContent).toContain(
-      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC'
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC',
     );
 
     await accordian.expandSectionThree();
     const sectionThreeContent = await accordian.getSectionThreeContent();
     expect(sectionThreeContent).toContain(
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout'
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout',
     );
   });
 });
