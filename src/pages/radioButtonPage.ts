@@ -12,7 +12,7 @@ export class RadioButtonPage extends BasePage {
 
   async selectYes() {
     await this.page.evaluate(() => {
-      document.querySelectorAll('iframe[id^="google_ads_iframe"]').forEach(el => el.remove());
+      document.querySelectorAll('iframe[id^="google_ads_iframe"]').forEach((el) => el.remove());
     });
     await this.page.locator('label[for="yesRadio"]').click();
   }

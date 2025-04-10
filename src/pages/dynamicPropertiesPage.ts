@@ -18,10 +18,8 @@ export class DynamicPropertiesPage extends BasePage {
     if (!buttonHandle) {
       throw new Error('Enable-after button not found');
     }
-    await this.page.waitForFunction(
-      (button) => !(button as HTMLButtonElement).disabled,
-      buttonHandle,
-      { timeout: 10000 }
-    );
+    await this.page.waitForFunction((button) => !(button as HTMLButtonElement).disabled, buttonHandle, {
+      timeout: 10000,
+    });
   }
 }

@@ -17,7 +17,7 @@ export class UploadDownloadPage extends BasePage {
   async downloadFile() {
     const [download] = await Promise.all([
       this.page.waitForEvent('download'),
-      this.page.locator('#downloadButton').click()
+      this.page.locator('#downloadButton').click(),
     ]);
     return download;
   }

@@ -16,12 +16,12 @@ export class PracticeFormPage extends BasePage {
     });
   }
 
-  async fillForm(data: { firstName: string; lastName: string; email: string; mobile: string; }) {
+  async fillForm(data: { firstName: string; lastName: string; email: string; mobile: string }) {
     await this.page.locator('#firstName').fill(data.firstName);
     await this.page.locator('#lastName').fill(data.lastName);
     await this.page.locator('#userEmail').fill(data.email);
     await this.page.evaluate(() => {
-      document.querySelectorAll('iframe[id^="google_ads_iframe"]').forEach(el => el.remove());
+      document.querySelectorAll('iframe[id^="google_ads_iframe"]').forEach((el) => el.remove());
     });
     await this.page.locator('label[for="gender-radio-1"]').click();
     await this.page.locator('#userNumber').fill(data.mobile);

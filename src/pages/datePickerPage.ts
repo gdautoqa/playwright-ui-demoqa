@@ -3,7 +3,7 @@ import { BasePage } from './BasePage';
 
 export class DatePickerPage extends BasePage {
   readonly dateInput: Locator;
-  
+
   constructor(page: Page) {
     super(page);
     this.dateInput = this.page.locator('#datePickerMonthYearInput');

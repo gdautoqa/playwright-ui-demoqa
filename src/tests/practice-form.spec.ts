@@ -9,7 +9,7 @@ test.describe('Practice Form', () => {
       firstName: 'John',
       lastName: 'Doe',
       email: 'john.doe@example.com',
-      mobile: '1234567890'
+      mobile: '1234567890',
     });
     await practiceForm.submit();
     await expect(page.locator('#example-modal-sizes-title-lg')).toBeVisible({ timeout: 10000 });
